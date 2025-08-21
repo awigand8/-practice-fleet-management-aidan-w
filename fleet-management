@@ -1,1 +1,31 @@
+//Vehicle Class
+class Vehicle {
+    constructor(type, make, model, year, mileage = 0) {
+        this.type = type;
+        this.make = make;
+        this.model = model;
+        this.year = year;
+        this.mileage = mileage;
+    }
+    drive(distance) {
+        return (this.mileage = distance + this.mileage);
+    }
+    getDetails() {
+        return `Vehicle stats: Type: ${this.type}, Make: ${this.make}, Model: ${this.model}, Year: ${this.year}, Mileage: ${this.mileage}`;
+    }
+}
 
+let car1 = new Vehicle('Car', 'Toyota', 'Camry', 2018, 100000);
+console.log(car1);
+console.log(car1.getDetails());
+console.log(car1.drive(10000));
+
+let truck1 = new Vehicle('Truck', 'Ford', 'F150', 2025, 50000);
+console.log(truck1);
+console.log(truck1.getDetails());
+console.log(truck1.drive(3000));
+
+let motorcycles1 = new Vehicle('Motorcycle', 'Yamaha', 'R1', 2020, 20000);
+console.log(motorcycles1);
+console.log(motorcycles1.getDetails());
+console.log(motorcycles1.drive(5000));
